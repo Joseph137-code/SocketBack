@@ -9,12 +9,13 @@ const Sockets  = require('./sockets');
 const { dbConnection } = require('../database/config');
 
 
+
 class Server {
 
     constructor() {
 
         this.app  = express();
-        this.port = process.env.port || 8080;
+        const port = process.env.port || 8080
 
         // Conectar a DB
         dbConnection();

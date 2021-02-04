@@ -9,12 +9,13 @@ const Sockets  = require('./sockets');
 const { dbConnection } = require('../database/config');
 
 
+
 class Server {
 
     constructor() {
 
         this.app  = express();
-        this.port = process.env.port || 8080;
+        const port = process.env.port || 8080
 
         // Conectar a DB
         dbConnection();
@@ -58,7 +59,7 @@ class Server {
 
         // Inicializar Server
         this.app.listen(this.port, "0.0.0.0", ()=>{
-            console.log("Conectado...:", this.port)
+            console.log("Conectado...:", port)
         });
 
         /*this.server.listen( this.port, () => {
