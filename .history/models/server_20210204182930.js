@@ -57,13 +57,13 @@ class Server {
         this.configurarSockets();
 
         // Inicializar Server
-        /*this.app.listen(this.port, "0.0.0.0", ()=>{
+        this.app.listen(this.port, "0.0.0.0", ()=>{
             console.log("Conectado...:", this.port)
-        });*/
-
-        this.server.listen( this.port,"0.0.0.0", () => {
-            console.log('Server corriendo en puerto:', this.port );
         });
+
+        /*this.server.listen( this.port, () => {
+            console.log('Server corriendo en puerto:', this.port );
+        });*/
     }
 
 }

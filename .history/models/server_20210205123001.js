@@ -61,7 +61,7 @@ class Server {
             console.log("Conectado...:", this.port)
         });*/
 
-        this.server.listen( this.port,"0.0.0.0", () => {
+        /this.server.listen( this.port,"0.0.0.0" () => {
             console.log('Server corriendo en puerto:', this.port );
         });
     }
