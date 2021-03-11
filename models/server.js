@@ -14,7 +14,7 @@ class Server {
     constructor() {
 
         this.app  = express();
-        this.port = process.env.port || 8080;
+        this.port = process.env.PORT || 8080;
 
         // Conectar a DB
         dbConnection();
@@ -23,7 +23,8 @@ class Server {
         this.server = http.createServer( this.app );
         
         // Configuraciones de sockets
-        this.io = socketio( this.server, { cors: { origin: "https://practical-booth-60047d.netlify.app" | "*" , methods: ["GET", "POST"], }} );
+        //this.io = socketio(this.server, { cors: { origin: "http://localhost:3001", methods: ["GET", "POST"], }, }); }
+        this.io = socketio( this.server, { /* configuraciones */ } );
     }
 
     middlewares() {
